@@ -1,4 +1,5 @@
 # puppeteer-base-project
+https://medium.com/@jaredpotter1/connecting-puppeteer-to-existing-chrome-window-8a10828149e0
 
 Simple base project showing puppeteer.
 
