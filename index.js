@@ -1,3 +1,4 @@
+// @source: https://medium.com/@jaredpotter1/connecting-puppeteer-to-existing-chrome-window-8a10828149e0
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
@@ -9,7 +10,8 @@ const fs = require('fs');
 
   // OPTION 2 - Connect to existing.
   // MAC: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --no-first-run --no-default-browser-check --user-data-dir=$(mktemp -d -t 'chrome-remote_data_dir')
-  // PC: start chrome.exe –remote-debugging-port=9222
+  // PC: start chrome.exe –remote-debugging-port=9222 --user-data-dir=/test/ChromeData
+  // Get webSocketDebuggerUrl from http://127.0.0.1:9222/json/version
   // Note: this url changes each time the command is run.
   // const wsChromeEndpointUrl = 'ws://127.0.0.1:9222/devtools/browser/41a0b5f0-6747-446a-91b6-5ba30c87e951';
   // const browser = await puppeteer.connect({
